@@ -213,11 +213,11 @@ p {
   padding: 2.5em;
 }
 
-.card--light::before {
+.card--light::after {
   border: 2px dashed #c1beb8;
   border-radius: 15px;
   bottom: 0.425em;
-  content: ' ';
+  /*content: ' ';*/
   display: block;
   left: 0.425em;
   position: absolute;

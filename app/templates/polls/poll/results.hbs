@@ -1,0 +1,45 @@
+<div class="card">
+
+  <header class="header">
+    <h2>Welcome, Woodland Wanderers!</h2>
+    <p>Now that you"ve completed your training, here"s a quick quiz to test your skills.</p>
+  </header>
+
+  <main class="card card--light">
+
+    <h3 class="border">{{model.question}}</h3>
+    <div class="border">
+      <div class="grid group">
+
+        <div class="card-content grid-box grid-box--3of5">
+          <ul class="list list--answer list--answer--flush">
+            {{#each model.options as |option|}}
+              <li class="list-item">
+                <span>{{option.label}}</span>
+              </li>
+            {{/each}}
+          </ul>
+
+
+        </div>
+
+        <div class="grid-box grid-box--2of5">
+          {{#each model.options as |option|}}
+            <div class="progress">
+              <p class="progress-info">{{option-tally poll=model option=option}}</p>
+            </div>
+          {{/each}}
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="/" class="btn btn--primary btn--back">Back</a>
+    </div>
+
+  </main>
+
+</div>
+{{outlet}}

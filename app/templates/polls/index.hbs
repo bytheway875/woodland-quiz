@@ -1,0 +1,13 @@
+<header class="header">
+  <h2>All The Polls</h2>
+  <p>Check out out all the Polls related to Woodland Creatures!</p>
+</header>
+
+<div class="card card--light">
+
+  {{#each model as |poll|}}
+    {{#link-to "polls.poll" poll}}{{poll.question}}{{/link-to}}
+    <br>
+  {{/each}}
+
+</div>
